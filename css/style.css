@@ -6709,122 +6709,58 @@ form textarea {
   }
 } */
 /* Floating Buttons Parent Stack Wrapper */
-.floating-buttons-stack {
-    position: fixed !important;
-    bottom: 25px !important;
-    right: 25px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    z-index: 99999 !important;
-    align-items: center !important;
+.scroll-top-to { 
+  width: 54px !important;
+  height: 54px !important;
+  line-height: 50px !important;
+  background: rgba(13, 27, 42, 0.9) !important; /* Elegant Dark Navy Translucent */
+  backdrop-filter: blur(8px) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  text-align: center !important;
+  border: 2px solid #d1202e !important; /* Premium Red Border */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+  cursor: pointer !important;
+  position: fixed !important;
+  bottom: 100px !important;
+  right: 30px !important;
+  z-index: 9999 !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  
+  /* Bouncing Animation */
+  animation: smoothBounce 2.2s infinite ease-in-out !important;
 }
 
-/* Common Base Styling for Floating Action Buttons */
-.floating-buttons-stack .float-btn {
-    width: 52px !important;
-    height: 52px !important;
-    border-radius: 50% !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #ffffff !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
-    transition: all 0.3s ease !important;
+/* Icon Design */
+.scroll-top-to i {
+  font-size: 1.15rem !important;
+  color: #ffffff !important;
+  transition: transform 0.3s ease !important;
+  display: inline-block !important;
 }
 
-/* Static Floating Buttons (WhatsApp & Tawk.to) Always Flex */
-.floating-buttons-stack .float-whatsapp,
-.floating-buttons-stack .float-tawkto {
-    display: flex !important;
-}
-
-.floating-buttons-stack .float-btn i {
-    font-size: 1.35rem !important;
-    transition: transform 0.3s ease !important;
-}
-
-/* 1. Scroll To Top Button Custom Style (Preserving JS Display Toggle) */
-.scroll-top-to {
-    background: rgba(13, 27, 42, 0.9) !important;
-    backdrop-filter: blur(8px) !important;
-    border: 2px solid #d1202e !important;
-    animation: smoothBounce 2.2s infinite ease-in-out !important;
-    /* Fixed: Pehle ki tarah JS iska display: block / none control kar sakega */
-    display: none;
-}
-
-/* Jab JS scroll handle karke button active kare (e.g. style="display: block;") */
-.scroll-top-to[style*="display: block"],
-.scroll-top-to[style*="display: flex"] {
-    display: flex !important;
-}
-
+/* Stylish Non-Zoom Hover Effect */
 .scroll-top-to:hover {
-    background: #d1202e !important;
-    border-color: #ffffff !important;
-    box-shadow: 0 0 20px rgba(209, 32, 46, 0.6) !important;
-    animation-play-state: paused !important;
+  background: #d1202e !important; /* Dark Navy se Red Smooth Fill */
+  border-color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(209, 32, 46, 0.6) !important; /* Neon Red Glow Effect */
+  animation-play-state: paused !important;
 }
 
+/* Hover par Arrow Up Slide Hoga (Without Scale/Zoom) */
 .scroll-top-to:hover i {
-    transform: translateY(-4px) !important;
+  transform: translateY(-4px) !important;
+  color: #ffffff !important;
 }
 
-/* 2. WhatsApp Button Custom Style */
-.floating-buttons-stack .float-whatsapp {
-    background-color: #25d366 !important;
-    border: 2px solid #ffffff !important;
-}
-
-.floating-buttons-stack .float-whatsapp:hover {
-    background-color: #1eb957 !important;
-    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6) !important;
-    transform: translateY(-3px) !important;
-}
-
-/* 3. Tawk.to Button Custom Style */
-.floating-buttons-stack .float-tawkto {
-    background-color: #03a9f4 !important;
-    border: 2px solid #ffffff !important;
-}
-
-.floating-buttons-stack .float-tawkto:hover {
-    background-color: #0288d1 !important;
-    box-shadow: 0 0 20px rgba(3, 169, 244, 0.6) !important;
-    transform: translateY(-3px) !important;
-}
-
-/* Continuous Subtle Floating Animation for Scroll Top */
+/* Smooth Floating Bouncing Keyframes */
 @keyframes smoothBounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-6px);
-    }
-}
-
-/* Mobile Responsive Adjustments (From original CSS) */
-@media (max-width: 768px) {
-    .floating-buttons-stack {
-        bottom: 15px !important;
-        right: 15px !important;
-        gap: 8px !important;
-    }
-
-    .floating-buttons-stack .float-btn {
-        width: 42px !important;
-        height: 42px !important;
-    }
-
-    .floating-buttons-stack .float-btn i {
-        font-size: 1.1rem !important;
-    }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 /* Responsive Hide for Mobile/Tablet Screens */
