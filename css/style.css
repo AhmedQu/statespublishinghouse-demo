@@ -6763,6 +6763,35 @@ form textarea {
   }
 }
 
+.offset1 {
+    box-shadow: 0.3em 0.3em 0 0 #d1202d, inset 0 0 0 0 #d1202d;
+    color: #fff;
+    font-family: 'InterSemiBold', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+.button1 {
+    background: none;
+    border: 2px solid #d1202d;
+    font: inherit;
+    line-height: 1;
+    margin: 0;
+    padding: 0.8em 1.5em;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+}
+.offset1:hover,
+.offset1:focus {
+    /* Fixed em dimensions ki jagah 100% inset fill use kiya taake har screen par sahi dikhe */
+    box-shadow: 0 0 0 0 #d1202d, inset 100vw 0 0 0 #d1202d;
+    border-color: #d1202d;
+    color: #fff;
+}
+
 /* Responsive Hide for Mobile/Tablet Screens */
 @media (max-width: 1200px) {
     .hero-left-assets {
@@ -6771,6 +6800,28 @@ form textarea {
 
     .hero-right-assets {
         display: none;
+    }
+
+    .offset1 {
+        box-shadow: 0.3em 0.3em 0 0 #d1202d, inset 0 0 0 0 #d1202d;
+        color: #fff;
+        font-family: 'InterSemiBold', sans-serif;
+        font-size: 0.7rem;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    .button1 {
+        background: none;
+        border: 2px solid #d1202d;
+        font-size: 12px;
+        line-height: 1;
+        margin: 0;
+        padding: 0.4em 1.5em;
+        color: #fff;
+        width: 100%;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
     }
 }
 
