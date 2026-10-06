@@ -427,13 +427,13 @@
 					<img src="images/home/ContactPrinter.png" alt="Featured Books" class="img-fluid contactbarprinter">
 				</div>
 
-				<div class="col-md-2 d-flex align-items-center mb-3">
+				<div class="col-md-3 d-flex align-items-center mb-3">
 					<div class="info-icon-box me-3">
 						<i class="fa-regular fa-paper-plane"></i>
 					</div>
 					<div class="info-details">
 						<span class="info-label">Email</span>
-						<a href="mailto:support@xyz.com" class="info-value">support@xyz.com</a>
+						<a href="mailto:info@statespublishinghouse.com" class="info-value">info@statespublishinghouse.com</a>
 					</div>
 				</div>
 				<div class="col-md-1 d-none d-md-block">
@@ -561,23 +561,8 @@
 		<!-- <div class="scroll-top-to">
 			<i class="fa fa-angle-up"></i>
 		</div> -->
-		<div class="floating-buttons-stack">
-	
-			<!-- Tawk.to Chat Trigger Button -->
-			<a href="javascript:void(0);" onclick="openTawkChat()" class="float-btn float-tawkto" title="Chat with us">
-                <i class="fa-solid fa-comments"></i>
-            </a>
-
-			<!-- WhatsApp Direct Chat Button -->
-			<a href="https://wa.me/1234567890" target="_blank" class="float-btn float-whatsapp" title="WhatsApp Us">
-				<i class="fa-brands fa-whatsapp"></i>
-			</a>
-
-			<!-- Scroll To Top Button -->
-			<div class="float-btn float-scrolltop scroll-top-to" title="Scroll to Top">
-				<i class="fa-solid fa-chevron-up"></i>
-			</div>
-
+		<div class="scroll-top-to">
+			<i class="fa-solid fa-chevron-up"></i>
 		</div>
 	</footer>
 
@@ -585,34 +570,8 @@
 Essential Scripts
 =====================================-->
 <!-- Official Tawk.to Live Chat Script -->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-
-  // Page load hote hi default Tawk.to bubble/icon ko hide kar dega
-  Tawk_API.onLoad = function() {
-    Tawk_API.hideWidget();
-  };
-
-  (function(){
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    // Yahan apni Tawk.to Property ID aur Widget ID dalein (e.g. https://embed.tawk.to/60a12345/1e12345)
-    s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
-
-  // Custom Button Click Function
-  function openTawkChat() {
-    if (typeof Tawk_API !== 'undefined' && Tawk_API.maximize) {
-      Tawk_API.showWidget(); // Widget visibility enable karega
-      Tawk_API.maximize();   // Default chat box open kar dega
-    } else {
-      console.error("Tawk.to script load nahi hua hai. Property/Widget ID check karein.");
-    }
-  }
-</script>
+<!--Start of Tawk.to Script-->   
+<!--End of Tawk.to Script--> 
 	<script src="plugins/jquery/jquery.min.js"></script>
 	<script src="plugins/bootstrap/popper.min.js"></script>
 	<script src="plugins/bootstrap/bootstrap.min.js"></script>
@@ -735,95 +694,23 @@ Essential Scripts
 		});
 
 
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const defaultCard = document.getElementById('defaultActive');
-        
-            // Page load par floating card ko 'Company' plan par position karein
-            if (defaultCard) {
-                setTimeout(() => {
-                moveHighlight(defaultCard);
-                }, 100);
-            }
-
-            // Mouse leave par vapas default card par chala jaye
-            const outerBox = document.getElementById('pricingBox');
-            if (outerBox) {
-                outerBox.addEventListener('mouseleave', () => {
-                if (defaultCard) {
-                    moveHighlight(defaultCard);
-                }
-                });
-            }
-        });
-
-        // Mouse movement par Dark Blue Container ko smooth slide karwane ka function
-        function moveHighlight(element) {
-            const floatingBg = document.getElementById('floatingBg');
-            const outerBox = document.getElementById('pricingBox');
-            const allCards = document.querySelectorAll('.plan-card-item');
-
-            if (!floatingBg || !outerBox) return;
-
-            // Purane hovered classes remove karein
-            allCards.forEach(card => card.classList.remove('hovered-card'));
-
-            // Selected element par hovered class lagayein
-            element.classList.add('hovered-card');
-
-            // Element positions calculate karein
-            const cardRect = element.getBoundingClientRect();
-            const boxRect = outerBox.getBoundingClientRect();
-
-            // Floating dark blue box ki nayi position set karein
-            floatingBg.style.width = `${cardRect.width}px`;
-            floatingBg.style.height = `${cardRect.height + 20}px`; // Pop-out height
-            floatingBg.style.left = `${cardRect.left - boxRect.left}px`;
-            floatingBg.style.top = `${cardRect.top - boxRect.top - 10}px`;
-        }
-
-        // Monthly / Yearly Price and Heading Toggle Switch
-        function switchPlan(type) {
-            const btnMonthly = document.getElementById('btnMonthly');
-            const btnYearly = document.getElementById('btnYearly');
-            const priceVals = document.querySelectorAll('.price-val');
-            const pricePeriods = document.querySelectorAll('.price-period'); // Month/Year text reference
-
-            if (type === 'yearly') {
-                btnMonthly.classList.remove('active');
-                btnYearly.classList.add('active');
-            } else {
-                btnYearly.classList.remove('active');
-                btnMonthly.classList.add('active');
-            }
-
-            // Prices Update
-            priceVals.forEach(price => {
-                price.style.opacity = '0';
-                setTimeout(() => {
-                    if (type === 'yearly') {
-                        price.textContent = '$' + price.getAttribute('data-yearly');
-                    } else {
-                        price.textContent = '$' + price.getAttribute('data-monthly');
-                    }
-                    price.style.opacity = '1';
-                }, 150);
-            });
-
-            // /month to /year Heading Text Update
-            pricePeriods.forEach(period => {
-                period.style.opacity = '0';
-                setTimeout(() => {
-                    if (type === 'yearly') {
-                        period.textContent = '/ Annually';
-                    } else {
-                        period.textContent = '/ Monthly';
-                    }
-                    period.style.opacity = '1';
-                }, 150);
-            });
-        }
+ 
 	</script>
+
+
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/6ac37fbf567e6834c583cf87/1k45qm1ev';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
 
 </body>
 </html>
