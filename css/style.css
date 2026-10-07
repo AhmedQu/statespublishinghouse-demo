@@ -3451,7 +3451,7 @@ p.testimonial-subheading {
 
 /* Header Typography */
 .pricing-main-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'BitterSemiBold';
     font-weight: 700;
     color: #262626;
@@ -3460,7 +3460,7 @@ p.testimonial-subheading {
 .pricing-sub-text {
     color: #262626;
     font-family: 'InterRegular';
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 35px;
 }
 
@@ -3469,15 +3469,16 @@ p.testimonial-subheading {
     display: inline-flex;
     background-color: #F7F7F9;
     padding: 5px;
-    border-radius: 50px;
+    border: 1px solid #131F37;
+    border-radius: 10px;
     box-shadow: 0 20px 40px #fbfcfd;
 }
 
 .toggle-btn {
-    border: none;
+border: none;
     background: transparent;
     padding: 10px 24px;
-    border-radius: 50px;
+    border-radius: 10px;
     font-size: 1rem;
     font-family: 'InterRegular';
     font-weight: 700;
@@ -3488,196 +3489,194 @@ p.testimonial-subheading {
 }
 
 .toggle-btn.active {
-    background-color: #d1202e;
-    /* Brand Red Theme Pill */
+background-color: #131F37;
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(209, 32, 46, 0.3);
+    box-shadow: 0 4px 12px #131f374d;
 }
 
-/* Outer Soft Container */
-.pricing-outer-box {
-    background: #F7F7F9;
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 28px;
-    padding: 30px;
-    position: relative;
-    box-shadow: 0 20px 40px #fbfcfd;
-    overflow: visible;
+/* Base Pricing Card Structure */
+.pricing-card {
+position: relative !important;
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    padding: 0px 5px;
 }
 
-/* Moving Floating Dark Blue Highlighting Card Indicator */
-.hover-floating-bg {
-    position: absolute;
-    background-color: #1a2744;
-    /* Dark Navy Blue */
-    border-radius: 24px;
-    box-shadow: 0 25px 50px rgba(26, 39, 68, 0.25);
-    transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Individual Plan Cards */
-.plan-card-item {
-    position: relative;
-    z-index: 2;
-    padding: 35px 30px;
-    border-radius: 24px;
-    display: flex;
-    flex-direction: column;
-    min-height: 480px;
-    transition: color 0.3s ease;
-}
-
-/* Popular Badge Inside Active Card */
-.popular-badge {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    background: rgb(209 32 46);
-    color: #ffffff;
-    font-size: 0.80rem;
+/* BEST SELLER Badge */
+.pricing-card .badge-bestseller {
+position: absolute !important;
+    top: -20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background-color: #FF0000 !important;
+    color: #ffffff !important;
+    font-size: 0.90rem !important;
+    font-weight: 800 !important;
     font-family: 'InterMedium';
-    font-weight: 800;
-    padding: 5px 12px;
-    border-radius: 5px;
-    letter-spacing: 0.8px;
-    opacity: 0;
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
+    padding: 10px 22px !important;
+    border-radius: 20px !important;
+    z-index: 10 !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 4px 10px rgba(209, 32, 46, 0.3) !important;
 }
 
-.hovered-card .popular-badge {
-    opacity: 1;
-    transform: translateY(0);
+/* Base Header Layout */
+.pricing-card .card-header-top {
+    color: #ffffff !important;
+    padding: 38px 20px 24px 20px !important;
+    border-radius: 10px !important;
+    text-align: left !important;
+    transition: background-color 0.35s ease !important;
 }
 
-/* Price Section */
-.price-header {
-    margin-bottom: 25px;
-}
-
-.price-val {
-    font-size: 4rem;
+.pricing-card .plan-name {
     font-family: 'Playfair';
-    font-weight: 800;
-    color: #333333;
-    transition: color 0.3s ease;
+    font-size: 1.55rem !important;
+    font-weight: 700 !important;
+    color: #fff;
+    margin-bottom: 8px !important;
+    line-height: 1.2 !important;
 }
 
-.price-period {
-    font-size: 1.3rem;
-    font-family: 'InterRegular';
-    color: #333333;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.pricing-card .plan-desc {
+font-family: 'InterSemiBold';
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+    color: #fff;
+    margin-bottom: 16px !important;
+    min-height: 38px !important;
 }
 
-.plan-title {
-    font-size: 2rem;
-    font-weight: 700;
-    font-family: 'InterMedium';
-    color: #333333;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
+.pricing-card .price-val {
+font-size: 3rem !important;
+    font-family: 'InterSemiBold';
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: -1px !important;
 }
 
-.plan-desc {
-    font-size: 1rem;
-    font-family: 'InterRegular';
-    color: #333333;
-    margin-bottom: 30px;
-    transition: color 0.3s ease;
+/* Body Content */
+.pricing-card .card-body-content {
+  padding: 24px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  flex-grow: 1 !important;
 }
 
-/* List Items */
-.plan-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 35px 0;
-    flex-grow: 1;
+/* Features List */
+.pricing-card .features-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 25px 0 !important;
 }
 
-.plan-features li {
-    font-size: 1rem;
-    font-family: 'InterRegular';
-    color: #333333;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.pricing-card .features-list li {
+    font-size: 0.92rem !important;
+    font-family: 'InterSemiBold';
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    margin-bottom: 11px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
 }
 
-.plan-features li i {
-    color: #8c93a8;
-    font-size: 0.85rem;
-    transition: color 0.3s ease;
+.pricing-card .features-list li i {
+  font-size: 1rem !important;
+  transition: color 0.35s ease !important;
 }
 
-/* Action Button */
-.card-btn-area {
-    margin-top: auto;
-}
-
-.action-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px 20px;
-    background-color: #1a2744;
-    color: #ffffff;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 1rem;
-    font-family: 'InterRegular';
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-/* ===================================================
-   TEXT & BUTTON STYLES WHEN CARD IS HOVERED (DARK BLUE)
-   =================================================== */
-.hovered-card .price-val,
-.hovered-card .plan-title,
-.hovered-card .plan-features li {
+/* Base Action Button */
+.pricing-card .btn-card-action {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
     color: #ffffff !important;
+    font-weight: 700 !important;
+    font-family: 'InterSemiBold';
+    font-size: 1rem !important;
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    transition: all 0.35s ease !important;
 }
 
-.hovered-card .price-period,
-.hovered-card .plan-desc {
-    color: #ffffff !important;
+/* ======================================================== */
+/* 1. CORNER CARDS (Default Red -> Hover Blue) */
+/* ======================================================== */
+
+.pricing-card.card-red {
+  /* border: 1.5px solid #d1202e !important; */
+  border: 2px solid transparent;
+    border-image: linear-gradient(180deg, #ffffff, #d1202e) 1; 
 }
 
-.hovered-card .plan-features li i {
-    color: #ffffff !important;
+.pricing-card.card-red .card-header-top,
+.pricing-card.card-red .btn-card-action {
+  background-color: #d1202e !important;
 }
 
-/* Hover Accent Color (Red Button) */
-.hovered-card .action-btn {
-    background-color: #d1202e !important;
-    /* Brand Red Theme on Hover */
-    color: #ffffff !important;
-    box-shadow: 0 8px 20px rgba(209, 32, 46, 0.4);
+.pricing-card.card-red .features-list li i {
+  color: #d1202e !important;
 }
 
-.hovered-card .action-btn:hover {
-    transform: translateY(-2px);
-    background-color: #b81925 !important;
+/* Hover State for Red Cards */
+.pricing-card.card-red:hover {
+  border-color: #0d1b2a !important;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 35px rgba(13, 27, 42, 0.15) !important;
 }
 
-/* Responsive Reset */
-@media (max-width: 991px) {
-    .hover-floating-bg {
-        display: none;
-        /* Mobile par clean stack design */
-    }
+.pricing-card.card-red:hover .card-header-top,
+.pricing-card.card-red:hover .btn-card-action {
+  background-color: #0d1b2a !important;
+}
 
-    .plan-card-item.hovered-card {
-        background-color: #1a2744;
-    }
+.pricing-card.card-red:hover .features-list li i {
+  color: #0d1b2a !important;
+}
+
+
+/* ======================================================== */
+/* 2. CENTER CARD (Default Blue -> Hover Red) */
+/* ======================================================== */
+
+.pricing-card.card-blue {
+  /* border: 1.5px solid #0d1b2a !important; */
+  border: 2px solid transparent;
+    border-image: linear-gradient(180deg, #ffffff, #0d1b2a) 1; 
+}
+
+.pricing-card.card-blue .card-header-top,
+.pricing-card.card-blue .btn-card-action {
+  background-color: #0d1b2a !important;
+}
+
+.pricing-card.card-blue .features-list li i {
+  color: #0d1b2a !important;
+}
+
+/* Hover State for Blue Card */
+.pricing-card.card-blue:hover {
+  border-color: #d1202e !important;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 35px rgba(209, 32, 46, 0.15) !important;
+}
+
+.pricing-card.card-blue:hover .card-header-top,
+.pricing-card.card-blue:hover .btn-card-action {
+  background-color: #d1202e !important;
+}
+
+.pricing-card.card-blue:hover .features-list li i {
+  color: #d1202e !important;
 }
 
 /*--------- Pricing Page ---------------*/
