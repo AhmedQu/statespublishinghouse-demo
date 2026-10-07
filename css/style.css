@@ -2043,6 +2043,11 @@ p.testimonial-subheading {
     font-weight: 700;
 }
 
+.highlight-red {
+    color: #d1202d;
+    font-weight: 700;
+}
+
 /* Custom Input Fields */
 .custom-input {
     background-color: #F2EFEA !important;
@@ -2208,11 +2213,11 @@ p.testimonial-subheading {
 }
 
 .info-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.8);
+    font-family: 'InterRegular';
+    font-size: 18px;
+    color: #fff;
     margin-bottom: 2px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .info-value {
@@ -6831,4 +6836,53 @@ form textarea {
         display: none !important;
         /* Mobile/tablet screen par text hide hone se bachane ke liye */
     }
+}
+.TermCondition-title {
+    color: #262626;
+    font-family: 'InterMedium';
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+.TermCondition-subtitle {
+    color: #262626;
+    font-family: 'InterMedium';
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.SubPagestitle {
+    color: #262626;
+    font-family: 'InterMedium';
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+ul.TermCondition-subtitle {
+  list-style: none !important; /* Default dots/bullets hatane ke liye */
+  padding-left: 0 !important;
+  margin-bottom: 1.2rem !important;
+}
+
+/* Individual List Item Styling */
+ul.TermCondition-subtitle li {
+    position: relative !important;
+    padding-left: 28px !important;
+    margin-bottom: 6px !important;
+    font-size: 1.2rem !important;
+    font-family: 'InterMedium';
+    color: #262626 !important;
+    line-height: 1.5 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Font Awesome Red Checkmark Icon Pseudoelement */
+ul.TermCondition-subtitle li::before {
+  content: "\f058" !important; /* Font Awesome Circle-Check Unicode */
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #d1202e !important; /* Aapka Red Theme Color */
+  font-size: 1rem !important;
 }
