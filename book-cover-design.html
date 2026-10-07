@@ -54,7 +54,7 @@
 				</div>
 				<a href="pricing.html">Pricing</a> 
 				<a href="contact-us.html">Contact</a>
-				<a href="#"> 
+				<a href="javascript:void(0);" onclick="openTawkChat()"> 
 					<button class="button offset w-100">Live Chat</button> 
 				</a>
 			</nav>
@@ -97,7 +97,7 @@
 				<a href="pricing.html"><i class="fa-solid fa-tags"></i> Pricing</a> 
 				<a href="contact-us.html"><i class="fa-solid fa-envelope"></i> Contact</a>
 			</nav>
-			<a href="#"> 
+			<a href="javascript:void(0);" onclick="openTawkChat()"> 
 				<button class="button offset w-100">Live Chat</button>
 			</a>
 		</div>
@@ -187,7 +187,7 @@
 							</a> 
 						</div>
 						<div class="col-md-6 mb-4">
-							<a href=""> 
+							<a href="javascript:void(0);" onclick="openTawkChat()"> 
 								<button class="button offset-red w-100">Live Chat</button> 
 							</a> 
 						</div>
@@ -338,7 +338,7 @@
 							</a> 
 						</div>
 						<div class="col-md-6 mb-4">
-							<a href=""> 
+							<a href="javascript:void(0);" onclick="openTawkChat()"> 
 								<button class="button offset-red w-100">Live Chat</button> 
 							</a> 
 						</div>
@@ -458,7 +458,7 @@
 							</a> 
 						</div>
 						<div class="col-md-6 mb-4">
-							<a href=""> 
+							<a href="javascript:void(0);" onclick="openTawkChat()"> 
 								<button class="button offset-red w-100">Live Chat</button> 
 							</a> 
 						</div>
@@ -493,7 +493,7 @@
 							</a> 
 						</div>
 						<div class="col-md-4 mb-4">
-							<a href=""> 
+							<a href="javascript:void(0);" onclick="openTawkChat()"> 
 								<button class="button offset w-100">Live Chat</button> 
 							</a> 
 						</div>
@@ -609,7 +609,7 @@
 					</a> 
 				</div>
 				<div class="col-md-4 mb-4">
-					<a href=""> 
+					<a href="javascript:void(0);" onclick="openTawkChat()"> 
 						<button class="button offset w-100">Live Chat</button> 
 					</a> 
 				</div>
@@ -1211,6 +1211,18 @@ Essential Scripts
 		})();
 	</script>
 	<!--End of Tawk.to Script-->
+
+	<script type="text/javascript">
+		function openTawkChat() {
+			if (typeof Tawk_API !== 'undefined') {
+			// Direct widget show aur maximize karega
+			Tawk_API.showWidget();
+			Tawk_API.maximize();
+			} else {
+			console.log("Tawk.to script abhi load ho rahi hai...");
+			}
+		}
+	</script>
 
 </body>
 </html>
