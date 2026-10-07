@@ -172,9 +172,11 @@
     <section class="SectionOne">
         <div class="container">
             
-            <div class="row align-items-end mb-5">
+            <div class="row align-items-start mb-5">
                 <div class="col-12 col-md-8">
-                    <h2 class="pricing-main-title">Plans & Pricing</h2>
+                    <h2 class="pricing-main-title"><span class="highlight-text">Publishing Packages</span> Designed for Your Success </h2> 
+                </div> 
+				<div class="col-12 col-md-8"> 
                     <p class="pricing-sub-text">
                         Whether your time-saving automation needs are large or small, we're here to help you scale.
                     </p>
@@ -186,72 +188,97 @@
                     </div>
                 </div>
             </div>
- 
-            <div class="pricing-outer-box" id="pricingBox"> 
-                <div class="hover-floating-bg" id="floatingBg"></div> 
-                <div class="row g-0 align-items-center position-relative"> 
-                    <div class="col-12 col-lg-4">
-                        <div class="plan-card-item" onmouseenter="moveHighlight(this)">
-                            <div class="price-header">
-                                <span class="price-val" data-monthly="19" data-yearly="15">$19</span>
-                                <span class="price-period">/month</span>
-                            </div> 
-                            <h3 class="plan-title">Starter</h3>
-                            <p class="plan-desc">Unleash the power of automation.</p> 
-                            <ul class="plan-features">
-                                <li><i class="fa-solid fa-check"></i> Multi-step Zaps</li>
-                                <li><i class="fa-solid fa-check"></i> 3 Premium Apps</li>
-                                <li><i class="fa-solid fa-check"></i> 2 Users team</li>
-                            </ul> 
-                            <div class="card-btn-area">
-                                <a href="#" class="action-btn">Choose plan</a>
-                            </div>
-                        </div>
-                    </div> 
 
-                    <div class="col-12 col-lg-4">
-                        <div class="plan-card-item" onmouseenter="moveHighlight(this)">
-                            <div class="price-header">
-                                <span class="price-val" data-monthly="54" data-yearly="42">$54</span>
-                                <span class="price-period">/month</span>
-                            </div> 
-                            <h3 class="plan-title">Professional</h3>
-                            <p class="plan-desc">Advanced tools to take your work to the next level.</p> 
-                            <ul class="plan-features">
-                                <li><i class="fa-solid fa-check"></i> Multi-step Zaps</li>
-                                <li><i class="fa-solid fa-check"></i> Unlimited Premium</li>
-                                <li><i class="fa-solid fa-check"></i> 50 Users team</li>
-                                <li><i class="fa-solid fa-check"></i> Shared Workspace</li>
-                            </ul> 
-                            <div class="card-btn-area">
-                                <a href="#" class="action-btn">Choose plan</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-12 col-lg-4">
-                        <div class="plan-card-item active-card" id="defaultActive" onmouseenter="moveHighlight(this)"> 
-                            <div class="popular-badge">MOST POPULAR</div> 
-                            <div class="price-header">
-                                <span class="price-val" data-monthly="89" data-yearly="69">$89</span>
-                                <span class="price-period">/month</span>
-                            </div> 
-                            <h3 class="plan-title">Company</h3>
-                            <p class="plan-desc">Automation plus enterprise-grade features.</p> 
-                            <ul class="plan-features">
-                                <li><i class="fa-solid fa-check"></i> Multi-step Zap</li>
-                                <li><i class="fa-solid fa-check"></i> Unlimited Premium</li>
-                                <li><i class="fa-solid fa-check"></i> Unlimited Users Team</li>
-                                <li><i class="fa-solid fa-check"></i> Advanced Admin</li>
-                                <li><i class="fa-solid fa-check"></i> Custom Data Retention</li>
-                            </ul> 
-                            <div class="card-btn-area">
-                                <a href="#" class="action-btn btn-highlight">Choose plan</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div> 
+ 			<div class="row g-4 justify-content-center align-items-stretch">
+				
+				<!-- Card 1: Standard Publishing (Default Red -> Hover Blue) -->
+				<div class="col-12 col-md-6 col-lg-4 d-flex">
+					<div class="pricing-card card-red w-100"> 
+						<div class="card-header-top">
+							<h3 class="plan-name">Standard Publishing</h3>
+							<p class="plan-desc">Professional publishing solutions tailored for every author's success.</p>
+							<div class="price-wrapper">
+								<span class="price-val" data-monthly="279" data-yearly="219">$ 279</span>
+								<span class="price-period">/ Monthly</span>
+							</div>
+						</div>
+						<div class="card-body-content">
+							<ul class="features-list">
+								<li><i class="fa-solid fa-circle-check"></i> Publishing On Amazon</li>
+								<li><i class="fa-solid fa-circle-check"></i> Ebook Proofreading</li>
+								<li><i class="fa-solid fa-circle-check"></i> Adjusting Layout Publishing Standards</li>
+								<li><i class="fa-solid fa-circle-check"></i> Formatting</li>
+								<li><i class="fa-solid fa-circle-check"></i> Authors And Books Profile</li>
+								<li><i class="fa-solid fa-circle-check"></i> Finalized Digital Files</li>
+								<li><i class="fa-solid fa-circle-check"></i> Book Cover Design</li>
+								<li><i class="fa-solid fa-circle-check"></i> Amazon Optimization</li>
+								<li><i class="fa-solid fa-circle-check"></i> 100% Ownership Rights</li>
+							</ul>
+							<a href="#" class="btn-card-action">Get Started</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 2: Extended Publishing (Default Blue -> Hover Red) -->
+				<div class="col-12 col-md-6 col-lg-4 d-flex">
+					<div class="pricing-card card-blue w-100">
+						<div class="badge-bestseller">BEST SELLER</div> 
+						<div class="card-header-top">
+							<h3 class="plan-name">Extended Publishing</h3>
+							<p class="plan-desc">Comprehensive publishing support for authors seeking greater reach.</p>
+							<div class="price-wrapper">
+							<span class="price-val" data-monthly="599" data-yearly="479">$ 599</span>
+							<span class="price-period">/ Monthly</span>
+							</div>
+						</div>
+						<div class="card-body-content">
+							<ul class="features-list">
+								<li><i class="fa-solid fa-circle-check"></i> Publishing On The Top 3 Platforms</li>
+								<li><i class="fa-solid fa-circle-check"></i> Ebook, Paperback</li>
+								<li><i class="fa-solid fa-circle-check"></i> Proofreading</li>
+								<li><i class="fa-solid fa-circle-check"></i> Adjusting Layout Publishing Standards</li>
+								<li><i class="fa-solid fa-circle-check"></i> Formatting</li>
+								<li><i class="fa-solid fa-circle-check"></i> Authors And Books Profile</li>
+								<li><i class="fa-solid fa-circle-check"></i> Finalized Digital Files</li>
+								<li><i class="fa-solid fa-circle-check"></i> Book Cover Design</li>
+								<li><i class="fa-solid fa-circle-check"></i> Platform Optimization</li>
+								<li><i class="fa-solid fa-circle-check"></i> 100% Ownership Rights</li>
+							</ul>
+							<a href="#" class="btn-card-action">Get Started</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 3: Mighty Publishing (Default Red -> Hover Blue) -->
+				<div class="col-12 col-md-6 col-lg-4 d-flex">
+					<div class="pricing-card card-red w-100"> 
+						<div class="card-header-top">
+							<h3 class="plan-name">Mighty Publishing</h3>
+							<p class="plan-desc">Advanced publishing solutions for maximum visibility and growth.</p>
+							<div class="price-wrapper">
+							<span class="price-val" data-monthly="999" data-yearly="799">$ 999</span>
+							<span class="price-period">/ Monthly</span>
+							</div>
+						</div>
+						<div class="card-body-content">
+							<ul class="features-list">
+								<li><i class="fa-solid fa-circle-check"></i> Publishing On The Top 5 Platforms</li>
+								<li><i class="fa-solid fa-circle-check"></i> Ebook, Paperback And Hardcover</li>
+								<li><i class="fa-solid fa-circle-check"></i> Proofreading</li>
+								<li><i class="fa-solid fa-circle-check"></i> Adjusting Layout Publishing Standards</li>
+								<li><i class="fa-solid fa-circle-check"></i> Formatting</li>
+								<li><i class="fa-solid fa-circle-check"></i> Authors And Books Profile</li>
+								<li><i class="fa-solid fa-circle-check"></i> Finalized Digital Files</li>
+								<li><i class="fa-solid fa-circle-check"></i> Book Cover Design</li>
+								<li><i class="fa-solid fa-circle-check"></i> Platform Optimization</li>
+								<li><i class="fa-solid fa-circle-check"></i> 100% Ownership Rights</li>
+							</ul>
+							<a href="#" class="btn-card-action">Get Started</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
         </div>
     </section>
 	<!--============================================ Section Pricing =============================================-->
@@ -872,96 +899,54 @@ Essential Scripts
                 }
             });
 		});
-
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const defaultCard = document.getElementById('defaultActive');
-        
-            // Page load par floating card ko 'Company' plan par position karein
-            if (defaultCard) {
-                setTimeout(() => {
-                moveHighlight(defaultCard);
-                }, 100);
-            }
-
-            // Mouse leave par vapas default card par chala jaye
-            const outerBox = document.getElementById('pricingBox');
-            if (outerBox) {
-                outerBox.addEventListener('mouseleave', () => {
-                if (defaultCard) {
-                    moveHighlight(defaultCard);
-                }
-                });
-            }
-        });
-
-        // Mouse movement par Dark Blue Container ko smooth slide karwane ka function
-        function moveHighlight(element) {
-            const floatingBg = document.getElementById('floatingBg');
-            const outerBox = document.getElementById('pricingBox');
-            const allCards = document.querySelectorAll('.plan-card-item');
-
-            if (!floatingBg || !outerBox) return;
-
-            // Purane hovered classes remove karein
-            allCards.forEach(card => card.classList.remove('hovered-card'));
-
-            // Selected element par hovered class lagayein
-            element.classList.add('hovered-card');
-
-            // Element positions calculate karein
-            const cardRect = element.getBoundingClientRect();
-            const boxRect = outerBox.getBoundingClientRect();
-
-            // Floating dark blue box ki nayi position set karein
-            floatingBg.style.width = `${cardRect.width}px`;
-            floatingBg.style.height = `${cardRect.height + 20}px`; // Pop-out height
-            floatingBg.style.left = `${cardRect.left - boxRect.left}px`;
-            floatingBg.style.top = `${cardRect.top - boxRect.top - 10}px`;
-        }
-
+  
         // Monthly / Yearly Price and Heading Toggle Switch
-        function switchPlan(type) {
-            const btnMonthly = document.getElementById('btnMonthly');
-            const btnYearly = document.getElementById('btnYearly');
-            const priceVals = document.querySelectorAll('.price-val');
-            const pricePeriods = document.querySelectorAll('.price-period'); // Month/Year text reference
+        // Monthly / Yearly Price and Heading Toggle Switch
+		function switchPlan(type) {
+			const btnMonthly = document.getElementById('btnMonthly');
+			const btnYearly = document.getElementById('btnYearly');
+			const priceVals = document.querySelectorAll('.price-val');
+			const pricePeriods = document.querySelectorAll('.price-period');
 
-            if (type === 'yearly') {
-                btnMonthly.classList.remove('active');
-                btnYearly.classList.add('active');
-            } else {
-                btnYearly.classList.remove('active');
-                btnMonthly.classList.add('active');
-            }
+			// Toggle Active Class on Switch Buttons
+			if (btnMonthly && btnYearly) {
+				if (type === 'yearly') {
+					btnMonthly.classList.remove('active');
+					btnYearly.classList.add('active');
+				} else {
+					btnYearly.classList.remove('active');
+					btnMonthly.classList.add('active');
+				}
+			}
 
-            // Prices Update
-            priceVals.forEach(price => {
-                price.style.opacity = '0';
-                setTimeout(() => {
-                    if (type === 'yearly') {
-                        price.textContent = '$' + price.getAttribute('data-yearly');
-                    } else {
-                        price.textContent = '$' + price.getAttribute('data-monthly');
-                    }
-                    price.style.opacity = '1';
-                }, 150);
-            });
+			// Update Prices Smoothly
+			priceVals.forEach(price => {
+				price.style.transition = 'opacity 0.2s ease';
+				price.style.opacity = '0';
 
-            // /month to /year Heading Text Update
-            pricePeriods.forEach(period => {
-                period.style.opacity = '0';
-                setTimeout(() => {
-                    if (type === 'yearly') {
-                        period.textContent = '/ Annually';
-                    } else {
-                        period.textContent = '/ Monthly';
-                    }
-                    period.style.opacity = '1';
-                }, 150);
-            });
-        }
+				setTimeout(() => {
+					const targetPrice = type === 'yearly' 
+						? price.getAttribute('data-yearly') 
+						: price.getAttribute('data-monthly');
+
+					if (targetPrice) {
+						price.textContent = '$ ' + targetPrice;
+					}
+					price.style.opacity = '1';
+				}, 150);
+			});
+
+			// Update Period Text (/ Monthly or / Annually)
+			pricePeriods.forEach(period => {
+				period.style.transition = 'opacity 0.2s ease';
+				period.style.opacity = '0';
+
+				setTimeout(() => {
+					period.textContent = (type === 'yearly') ? '/ Annually' : '/ Monthly';
+					period.style.opacity = '1';
+				}, 150);
+			});
+		}
 	</script>
 
 
